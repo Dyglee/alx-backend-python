@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 import asyncio
-from 0-basic_async_syntax import wait_random
+import random
+from typing import List
 
 
-async def wait_n(n: int = 0, max_delay: int = 10) -> list[float]:
-    delays: list[float] = []
+wait_random = __import__('0-basic_async_syntax').wait_random
+
+
+async def wait_n(n: int = 0, max_delay: int = 10) -> List[float]:
+    delays: List[float] = []
     tasks: List = []
 
     for _ in range(n):
